@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Nota } from './nota';
 
 @Component({
   selector: 'app-notas-list',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notas-list.component.css']
 })
 export class NotasListComponent implements OnInit {
+  listaNotas: Nota[] = [
+    { name: 'Carlos', value: 100 },
+    { name: 'Henrique', value: 0 },
+    { name: 'Josefa', value: 33 },
+    { name: 'Anandiara', value: 98 }
+  ];
+  isEditingMode = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  onSubmit(form: NgForm) {}
 }

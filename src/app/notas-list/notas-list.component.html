@@ -1,1 +1,17 @@
-<app-quadro-disciplinas></app-quadro-disciplinas>
+<table class="table">
+  <thead>
+    <th>Aluno</th>
+    <th>Nota</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let nota of listaNotas; let i = index">
+      <td>{{nota.name}}</td>
+      <td *ngIf="!isEditingMode">{{nota.value}}</td>
+      <td *ngIf="isEditingMode">
+        <form #form=ngForm (ngSubmit)="onSubmit(form)">
+          <input type="text" [(ngModel)]='nota'>
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
