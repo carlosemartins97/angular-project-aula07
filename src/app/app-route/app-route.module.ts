@@ -5,10 +5,12 @@ import { HomeComponent } from '../home/home.component';
 import { DisciplinasListComponent } from '../disciplinas-list/disciplinas-list.component';
 import { QuadroDisciplinasComponent } from '../quadro-disciplinas/quadro-disciplinas.component';
 import { FormsModule } from '@angular/forms';
+import { NotasListComponent } from '../notas-list/notas-list.component';
 
 const appRoutes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'disciplinas', component: DisciplinasListComponent }
+  { path: 'disciplinas', component: DisciplinasListComponent },
+  { path: 'notas', component: NotasListComponent }
 ];
 
 @NgModule({
@@ -16,7 +18,8 @@ const appRoutes = [
   declarations: [
     HomeComponent,
     DisciplinasListComponent,
-    QuadroDisciplinasComponent
+    QuadroDisciplinasComponent,
+    NotasListComponent
   ],
   exports: [RouterModule]
 })
