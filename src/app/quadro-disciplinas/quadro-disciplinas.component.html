@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <th>Disciplina</th>
+    <th>Dia da semana</th>
+    <th>Horário</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let disciplina of listaDisciplinas; let i = index">
+      <td>{{disciplina.nome}}</td>
+      <td>{{disciplina.dia}}</td>
+      <td>{{disciplina.horario}}</td>
+      <td *ngIf="name !== 'HomeComponent'">
+        <button class="btn btn-danger" type="button" (click)="onRemove(i)">X</button>
+        <button class="btn btn-info" type="button" (click)="onEdit(disciplina, i)">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+.input-control {
+  margin-top: 10px;
+}
+
+.btn-cadastro {
+  margin-top: 15px !important;
+}
+
+.disabled {
+  background: #999;
+  cursor: not-allowed;
+}

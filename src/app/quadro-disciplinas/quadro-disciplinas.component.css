@@ -1,0 +1,8 @@
+.btn-danger,
+.btn-info {
+  font-size: 10px;
+}
+
+.btn-info {
+  margin-left: 4px;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <h4 class="text-uppercase text-center mt-3">CADASTRAR NOVA DISCIPLINA</h4>
+
+  <form class="form-group" #form=ngForm (ngSubmit)="onSubmit(form)">
+    <div class="input-control">
+      <label for="">Nome da disciplina: </label>
+      <input type="text" name="nome" class="form-control" [(ngModel)]='name' [ngClass]="{'disabled': isEditing}">
+    </div>
+    <div class="input-control">
+      <label for="">Dia da semana: </label>
+      <select name="dia" id="" class="form-control" [(ngModel)]='dia'>
+        <option *ngFor="dia of diasDaSemana; let i = index" value="{{diasDaSemana[i]}}">{{diasDaSemana[i]}}</option>
+      </select>
+    </div>
+    <div class="input-control">
+      <label for="">Horário: </label>
+      <input type="text" name="horario" class="form-control" placeholder="Exemplo: 19:00 às 22:30" [(ngModel)]='horario'>
+    </div>
+    <button *ngIf="!isEditing" class="btn btn-success w-100 mt-4" type="submit">Adicionar</button>
+    <button *ngIf="isEditing" class="btn btn-primary w-100 mt-4" type="button" (click)="updateDisciplina(form)">Atualizar disciplina</button>
+    <button *ngIf="isEditing" class="btn btn-info w-100 mt-4" type="button" (click)="changeToAdd()">Criar nova disciplina</button>
+  </form>
+
+  <div class="container-fluid mt-5">
+    <h4 class="text-uppercase text-center mb-3">Disciplinas cadastradas</h4>
+    <app-quadro-disciplinas (editOn)=onEditMode($event)></app-quadro-disciplinas>
+  </div>
+</div>
