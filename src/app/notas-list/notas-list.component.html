@@ -1,0 +1,12 @@
+<table class="table mt-5">
+  <thead>
+    <th>Aluno</th>
+    <th>Nota</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let nota of listaNotas; let i = index">
+      <td>{{nota.name}}</td>
+      <td>{{nota.nota}}</td>
+    </tr>
+  </tbody>
+</table>
