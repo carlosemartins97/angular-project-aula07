@@ -9,12 +9,18 @@ import { CommonModule } from '@angular/common';
 import { QuadroDisciplinasComponent } from './quadro-disciplinas/quadro-disciplinas.component';
 import { DisciplinasListComponent } from './disciplinas-list/disciplinas-list.component';
 import { HomeComponent } from './home/home.component';
+import { NotasListComponent } from './notas-list/notas-list.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRouteModule, CommonModule],
-  declarations: [AppComponent, NavbarComponent, HomeComponent,
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
     DisciplinasListComponent,
-    QuadroDisciplinasComponent,],
+    QuadroDisciplinasComponent,
+    NotasListComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
