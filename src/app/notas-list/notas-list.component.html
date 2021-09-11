@@ -9,7 +9,7 @@
       <td *ngIf="!isEditingMode" (click)="changeMode()">{{nota.value}}</td>
       <td *ngIf="isEditingMode">
         <form #form=ngForm (ngSubmit)="onSubmit(form)">
-          <input type="text" name="nota" [(ngModel)]='nota'>
+          <input type="number" name="nota" [(ngModel)]='nota'>
           <button type="submit">Atualizar</button>
         </form>
       </td>
