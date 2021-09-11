@@ -16,9 +16,18 @@ export class NotasListComponent implements OnInit {
   ];
   isEditingMode = false;
 
+  name: string;
+
   constructor() {}
 
   ngOnInit() {}
 
-  onSubmit(form: NgForm) {}
+  onSubmit(form: NgForm) {
+    this.name = form.value.name;
+    this.isEditingMode = false;
+  }
+
+  changeMode() {
+    this.isEditingMode = true;
+  }
 }

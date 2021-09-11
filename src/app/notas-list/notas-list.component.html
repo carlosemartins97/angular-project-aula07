@@ -6,10 +6,11 @@
   <tbody>
     <tr *ngFor="let nota of listaNotas; let i = index">
       <td>{{nota.name}}</td>
-      <td *ngIf="!isEditingMode">{{nota.value}}</td>
+      <td *ngIf="!isEditingMode" (click)="changeMode()">{{nota.value}}</td>
       <td *ngIf="isEditingMode">
         <form #form=ngForm (ngSubmit)="onSubmit(form)">
-          <input type="text" [(ngModel)]='nota'>
+          <input type="text" name="nota" [(ngModel)]='nota'>
+          <button type="submit">Atualizar</button>
         </form>
       </td>
     </tr>
