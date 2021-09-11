@@ -1,5 +1,7 @@
 <div class="container">
-  <h4 class="text-uppercase text-center mt-3">CADASTRAR NOVA DISCIPLINA</h4>
+  <h4 class="text-uppercase text-center mt-3" *ngIf="!isEditing">CADASTRAR NOVA DISCIPLINA</h4>
+  <h4 class="text-uppercase text-center mt-3" *ngIf="isEditing">Atualizar a disciplina: <br> <strong>{{name}}</strong>
+  </h4>
 
   <form class="form-group" #form=ngForm (ngSubmit)="onSubmit(form)">
     <div class="input-control">
