@@ -6,7 +6,9 @@
   <tbody>
     <tr *ngFor="let nota of listaNotas; let i = index">
       <td>{{nota.name}}</td>
-      <td>{{nota.nota}}</td>
+      <td>
+        <input type="number" value={{nota.nota}} class="form-control w-25" #v (change)="onChange(v.value, i)">
+      </td>
     </tr>
   </tbody>
 </table>
